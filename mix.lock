@@ -1,4 +1,6 @@
 %{
+  "gleam_community_colour": {:hex, :gleam_community_colour, "1.4.1", "1f341500dbea0c43809a9ed2654cac98c47a1388a9966a273f2dbc8c62a4832a", [:gleam], [{:gleam_json, ">= 1.0.1 and < 3.0.0", [hex: :gleam_json, repo: "hexpm", optional: false]}, {:gleam_stdlib, "~> 0.34", [hex: :gleam_stdlib, repo: "hexpm", optional: false]}], "hexpm", "386cb9b01b33371538672eea8a6375a0a0adef41f17c86ddcb81c92ad00da610"},
+  "gleam_json": {:hex, :gleam_json, "2.3.0", "f514a52d69d3033708052d27bd063f725fb552979b6c83279bda4ce52865d460", [:gleam], [{:gleam_stdlib, ">= 0.51.0 and < 2.0.0", [hex: :gleam_stdlib, repo: "hexpm", optional: false]}], "hexpm", "c55c5c2b318533a8072d221c5e06e5a75711c129e420dd1ce463342106012e5d"},
   "gleam_stdlib": {:hex, :gleam_stdlib, "0.54.0", "0b5d730b1f56c4300ee5036b299b990a6d65b0da616045b14327c6e0f82a516c", [:gleam], [], "hexpm", "723ba61a2bae8d67406e59dd88cea1b3c3f266fc8d70f64be9fec81b4505b927"},
   "gleeunit": {:hex, :gleeunit, "1.3.0", "3b5313d12055a2653f866d21aa7dad779358b3f7f693d70ff0e782ed8c7e1d9e", [:gleam], [{:gleam_stdlib, ">= 0.33.0 and < 2.0.0", [hex: :gleam_stdlib, repo: "hexpm", optional: false]}], "hexpm", "0e6c83834ba65edcaaf4fe4fb94ac697d9262d83e6f58a750d63c9f6c8a9d9ff"},
 }

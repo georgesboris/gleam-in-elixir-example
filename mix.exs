@@ -23,7 +23,10 @@ defmodule App.MixProject do
       deps: [
         # Import our Gleam project as a regular local dependency.
         # Internally, the project will be compiled to erlang through `mix_gleam`.
-        {:app_gleam, path: "./app_gleam"}
+        {:app_gleam, path: "./app_gleam"},
+        # Import a published Gleam project so we can check compatibility
+        # even when we're not controlling the compilation steps ourselves.
+        {:gleam_community_colour, "~> 1.4"}
       ]
     ]
   end
