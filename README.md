@@ -2,7 +2,7 @@
 
 ![iex--S-mix](https://github.com/user-attachments/assets/d4c0738e-4add-4117-a180-60b825077279)
 
-At [uncover.co](https://uncover.co), we had a large [Elixir](https://elixir-lang.org/) codebase but we wanted to use [Gleam](https://gleam.run/) for its type-safety on some of our core business logic. We tried to use [mix_gleam](https://github.com/gleam-lang/mix_gleam) directly but couldn't really get things to work as we wanted them to. After experimenting a bit this was a simple solution we came up with. It is not perfect, but it has been suiting us for almost a year now.
+At [uncover.co](https://uncover.co), we have a large [Elixir](https://elixir-lang.org/) codebase but we wanted to use [Gleam](https://gleam.run/) for its type-safety on some of our core business logic. We tried to use [mix_gleam](https://github.com/gleam-lang/mix_gleam) directly but couldn't really get things to work as we wanted them to. After experimenting a bit this was a simple solution we came up with. It is not perfect, but it has been suiting us for almost a year now.
 
 ## Create and setup the Gleam project
 
