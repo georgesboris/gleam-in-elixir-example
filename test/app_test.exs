@@ -14,7 +14,7 @@ defmodule AppTest do
   end
 
   test "Gleam records should be represented as tuples" do
-    assert {:user, "user", "user@email", 0} == :app_gleam.new_user("user", "user@email", 0)
+    assert {:user, "user", "user@email", {:some, 30}} == :app_gleam.new_user("user", "user@email", 30)
   end
 
   test "Calling external gleam library should work" do

@@ -38,7 +38,7 @@ end
 It is completely up to you if you want to treat the boundary between your Elixir code and your Gleam code like they are isolated systems, with proper encoding/decoding from both sides. Or if you want to bypass this boundary check and just use Gleam's Erlang representation as a standard when communicating across these boundaries.
 
 > [!NOTE]
-> Calling Gleam functions from your Elixir application with no encode/decode has its risks though. So make sure to create tests that will guarantee that if a contract fails you will catch it. Gleam's type-checking will not catch this sort of problem ahead of time since we're basically bypassing the type-checker entirely.
+> Calling Gleam functions from your Elixir application with no encode/decode has its risks though, especially when dealing with records, since they are represented as tuples with positional attributes. So make sure to create tests that will guarantee that if a contract fails you will catch it. Gleam's type-checking will not catch this sort of problem ahead of time since we're basically bypassing the type-checker entirely.
 
 ```gleam
 // gleam/option.gleam (module from gleam's standard library)
@@ -56,7 +56,7 @@ pub type User {
   User(
     name: String,
     email: String,
-    age: Int
+    age: Option(Int)
   )
 }
 
@@ -77,7 +77,8 @@ defmodule App do
   end
 
   def gleams_records_are_more_risky do
-    assert {:user, "User", "user@email.com", 30} == :app_gleam.new_user("User", "user@email.com", 30)
+    assert {:user, "User", "user@email.com", {:some, 30}} ==
+      :app_gleam.new_user("User", "user@email.com", 30)
   end
 end
 ```
